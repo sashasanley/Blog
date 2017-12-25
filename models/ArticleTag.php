@@ -7,9 +7,9 @@ use Yii;
 /**
  * This is the model class for table "article_tag".
  *
- * @property int $id
- * @property int $article_id
- * @property int $tag_id
+ * @property integer $id
+ * @property integer $article_id
+ * @property integer $tag_id
  *
  * @property Tag $tag
  * @property Article $article

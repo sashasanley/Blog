@@ -18,7 +18,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Article', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -30,11 +29,17 @@ $this->params['breadcrumbs'][] = $this->title;
             'description:ntext',
             'content:ntext',
             'date',
-            //'image',
-            //'viewed',
-            //'user_id',
-            //'status',
-            //'category_id',
+            [
+                'format' => 'html',
+                'label' => 'Image',
+                'value' => function($data){
+                    return Html::img($data->getImage(), ['width'=>200]);
+                }
+            ],
+            // 'viewed',
+            // 'user_id',
+            // 'status',
+            // 'category_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
