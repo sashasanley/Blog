@@ -10,9 +10,6 @@
                 <a href="#" class="replay btn pull-right"> Replay</a>
                 <h5><?= $comment->user->name;?></h5>
 
-                <p class="comment-date">
-                    <?= $comment->getDate();?>
-                </p>
 
 
                 <p class="para"><?= $comment->text; ?></p>
@@ -23,7 +20,7 @@
 <?php endif;?>
 <!-- end bottom comment-->
 
-<?php if(!Yii::$app->user->isGuest):?>
+<?php if(!Yii::$app->user->isGuest || Yii::$app->user->isGuest):?>
     <div class="leave-comment"><!--leave comment-->
         <h4>Leave a reply</h4>
         <?php if(Yii::$app->session->getFlash('comment')):?>

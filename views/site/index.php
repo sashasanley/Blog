@@ -58,8 +58,8 @@ use yii\widgets\LinkPager;
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <a href="index1.php" class="single-destination">
-                        <img src="public/images/single-destination-1.jpg" alt="">
+                    <a href="https://en.wikipedia.org/wiki/Paris" class="single-destination">
+                        <img src="public/images/paris.jpg" alt="">
                         <div class="destination-overlay text-center text-uppercase">
                             <h2>Paris</h2>
                         </div>
